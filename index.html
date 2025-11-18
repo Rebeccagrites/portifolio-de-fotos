@@ -1,1 +1,149 @@
-
+<!doctype html>
+<html lang="pt-BR">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio Musical</title>
+  <script src="/_sdk/element_sdk.js"></script>
+    <style>
+    @view-transition { navigation: auto; }
+  </style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body>
+  <div class="musical-notes" id="musicalNotes"></div>  <div class="main-container" id="mainContainer">
+   <header>
+    <h1 id="siteTitle">Meu Portfólio Musical</h1>
+    <p class="subtitle" id="siteSubtitle">Uma jornada através da música e da vida 🎵</p>
+   </header>
+   <div class="heart-divider">
+    💜 💜 💜
+   </div>
+   <main>
+    <div class="sections-grid">
+     <div class="section-card" onclick="openSection('familia')">
+      <div class="section-icon">
+       👨‍👩‍👧‍👦💜
+      </div>
+      <h2 class="section-title" id="familiaTitle">Família</h2>
+      <p class="section-content">O amor e apoio que me guiam em cada nota da minha vida.</p>
+     </div>
+     <div class="section-card" onclick="openSection('amigos')">
+      <div class="section-icon">
+       👥💜
+      </div>
+      <h2 class="section-title" id="amigosTitle">Amigos</h2>
+      <p class="section-content">Harmonia perfeita, os amigos que fazem minha vida mais melodiosa.</p>
+     </div>
+     <div class="section-card" onclick="openSection('igreja')">
+      <div class="section-icon">
+       ⛪💜
+      </div>
+      <h2 class="section-title" id="igrejaTitle">Igreja</h2>
+      <p class="section-content">Onde a música encontra a fé e eleva minha alma.</p>
+     </div>
+     <div class="section-card" onclick="openSection('jocum')">
+      <div class="section-icon">
+       🌍💜
+      </div>
+      <h2 class="section-title" id="jocumTitle">JOCUM</h2>
+      <p class="section-content">Missão e propósito, levando música e amor ao mundo.</p>
+     </div>
+     <div class="section-card" onclick="openSection('escola')">
+      <div class="section-icon">
+       🎓💜
+      </div>
+      <h2 class="section-title" id="escolaTitle">Escola</h2>
+      <p class="section-content">Aprendizado constante, cada lição uma nova melodia.</p>
+     </div>
+     <div class="section-card" onclick="openSection('curso')">
+      <div class="section-icon">
+       📚💜
+      </div>
+      <h2 class="section-title" id="cursoTitle">Curso</h2>
+      <p class="section-content">Desenvolvendo habilidades e afinando meus talentos.</p>
+     </div>
+     <div class="section-card" onclick="openSection('rl')">
+      <div class="section-icon">
+       🎼💜
+      </div>
+      <h2 class="section-title" id="rlTitle">R e L</h2>
+      <p class="section-content">Uma sintonia especial que toca meu coração.</p>
+     </div>
+    </div>
+   </main>
+   <div class="heart-divider">
+    💜 🎵 💜 🎶 💜
+   </div>
+   <footer>
+    <div class="footer-hearts">
+     💜 💜 💜
+    </div>
+    <p>Feito com amor e música 🎵</p>
+   </footer>
+  </div>  <div id="familiaPage" class="section-page"><button class="back-btn" onclick="closeSection()">← Voltar</button>
+   <div class="section-page-content">
+    <div class="section-page-header">
+     <h2 class="section-page-title">👨‍👩‍👧‍👦 Família 💜</h2>
+     <p class="section-page-description">Momentos preciosos com quem mais amo</p>
+    </div>
+    <div class="photo-gallery" id="familiaGallery"></div>
+   </div>
+  </div>
+  <div id="amigosPage" class="section-page"><button class="back-btn" onclick="closeSection()">← Voltar</button>
+   <div class="section-page-content">
+    <div class="section-page-header">
+     <h2 class="section-page-title">👥 Amigos 💜</h2>
+     <p class="section-page-description">Memórias inesquecíveis com os melhores amigos</p>
+    </div>
+    <div class="photo-gallery" id="amigosGallery"></div>
+   </div>
+  </div>
+  <div id="igrejaPage" class="section-page"><button class="back-btn" onclick="closeSection()">← Voltar</button>
+   <div class="section-page-content">
+    <div class="section-page-header">
+     <h2 class="section-page-title">⛪ Igreja 💜</h2>
+     <p class="section-page-description">Fé, adoração e comunhão</p>
+    </div>
+    <div class="photo-gallery" id="igrejaGallery"></div>
+   </div>
+  </div>
+  <div id="jocumPage" class="section-page"><button class="back-btn" onclick="closeSection()">← Voltar</button>
+   <div class="section-page-content">
+    <div class="section-page-header">
+     <h2 class="section-page-title">🌍 JOCUM 💜</h2>
+     <p class="section-page-description">Missões que transformam vidas</p>
+    </div>
+    <div class="photo-gallery" id="jocumGallery"></div>
+   </div>
+  </div>
+  <div id="escolaPage" class="section-page"><button class="back-btn" onclick="closeSection()">← Voltar</button>
+   <div class="section-page-content">
+    <div class="section-page-header">
+     <h2 class="section-page-title">🎓 Escola 💜</h2>
+     <p class="section-page-description">Conhecimento e conquistas</p>
+    </div>
+    <div class="photo-gallery" id="escolaGallery"></div>
+   </div>
+  </div>
+  <div id="cursoPage" class="section-page"><button class="back-btn" onclick="closeSection()">← Voltar</button>
+   <div class="section-page-content">
+    <div class="section-page-header">
+     <h2 class="section-page-title">📚 Curso 💜</h2>
+     <p class="section-page-description">Desenvolvimento e aprendizado contínuo</p>
+    </div>
+    <div class="photo-gallery" id="cursoGallery"></div>
+   </div>
+  </div>
+  <div id="rlPage" class="section-page"><button class="back-btn" onclick="closeSection()">← Voltar</button>
+   <div class="section-page-content">
+    <div class="section-page-header">
+     <h2 class="section-page-title">🎼 R e L 💜</h2>
+     <p class="section-page-description">Uma conexão especial e única</p>
+    </div>
+    <div class="photo-gallery" id="rlGallery"></div>
+</div>
+ </div>
+</body>
+</html>
