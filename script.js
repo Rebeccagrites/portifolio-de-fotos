@@ -238,11 +238,11 @@ if (window.elementSdk) {
       ["amigos_title", config.amigos_title || defaultConfig.amigos_title],
       ["igreja_title", config.igreja_title || defaultConfig.igreja_title],
       ["jocum_title", config.jocum_title || defaultConfig.jocum_title],
-      ["escola_title", config.escola_title || defaultConfig.escola_title],
-      ["curso_title", config.curso_title || defaultConfig.curso_title],
-      ["rl_title", config.rl_title || defaultConfig.rl_title]
-    ])
-  });
+ ["escola_title", config.escola_title || defaultConfig.escola_title],
+ ["curso_title", config.curso_title || defaultConfig.curso_title],
+ ["rl_title", config.rl_title || defaultConfig.rl_title]
+ ])
+ });
 }
 
 // Funções globais para serem acessíveis pelo onclick no HTML
@@ -251,6 +251,6 @@ window.closeSection = closeSection;
 
 // Inicialização
 document.addEventListener('DOMContentLoaded', () => {
-  createMusicalNotes();
-  onConfigChange(config);
+ createMusicalNotes();
+onConfigChange(config);
 });
